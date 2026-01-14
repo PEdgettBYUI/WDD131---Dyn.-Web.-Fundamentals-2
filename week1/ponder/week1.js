@@ -16,14 +16,14 @@ console.log(student); //does not work, can't access a block variable outside the
 
 
 
-// TEST
+// // TEST
 
-console.log("✅ week1.js loaded");
+// console.log("✅ week1.js loaded");
 
-// If you need to manipulate the DOM safely:
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ DOM is ready");
-  // Example: change the heading text to prove it’s working
-  const h1 = document.querySelector("h1");
-  if (h1) h1.textContent = "Week 1 (JS is working!)";
-});
+// // If you need to manipulate the DOM safely:
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.log("✅ DOM is ready");
+//   // Example: change the heading text to prove it’s working
+//   const h1 = document.querySelector("h1");
+//   if (h1) h1.textContent = "Week 1 (JS is working!)";
+// });
