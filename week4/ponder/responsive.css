@@ -84,3 +84,21 @@ footer {
         border: none;
     }
 }
+/* Desktop Scale */
+@media screen and (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .menu {
+        display: block;
+        text-align: right;
+    }
+    .menu a {
+        display: inline;
+        border: none;
+    }
+}
