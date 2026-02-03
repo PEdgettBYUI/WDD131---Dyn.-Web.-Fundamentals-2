@@ -1,5 +1,6 @@
 header,
 footer {
+        border: 0;
         background-color: skyblue;
         color: black;
         width: 100%;
