@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+nav {
+    text-align: end;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-color: gold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+nav a {
+    color: red;
+    margin-left: 50px;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.info {
+    justify-self: end;
+}
+h2 {
+    color: red;
+}
+.book img {
+    justify-self: center;
+}
+
+footer p {
+    border-top: 4px solid;
+    border-top-color: gold;
+    padding-top: 10px;
+    text-align: center;
+}
