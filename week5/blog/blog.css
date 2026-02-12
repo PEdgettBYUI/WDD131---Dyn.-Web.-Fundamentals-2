@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     text-align: center;
 }
 nav {
@@ -33,4 +33,138 @@ footer p {
     border-top-color: gold;
     padding-top: 10px;
     text-align: center;
+}
+
+
+/* Tablet View and Up */
+/* @media screen and (min-width: 700px) {
+
+} */
+
+
+/* CHATGPT CODE */
+/* ========== Base / Global ========== */
+:root {
+  --accent: gold;
+  --brand: #c00; /* red */
+  --max-text: 65ch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+}
+
+/* ========== Header & Nav ========== */
+h1 {
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+}
+
+nav {
+  text-align: end;
+  border-top: 4px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+  padding: 10px 16px;
+}
+
+nav a {
+  color: var(--brand);
+  margin-left: 50px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ========== Book Article Grid ========== */
+/* MOBILE FIRST: single column, info on top-right; then title, cover, review centered */
+.book {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  /* One column, stack in reading order via grid areas */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "info"
+    "title"
+    "cover"
+    "review";
+}
+
+.info {
+  grid-area: info;
+  justify-self: end;    /* right side on mobile */
+  text-align: right;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.title {
+  grid-area: title;
+  color: var(--brand);
+  margin: 0.25rem 0 0;
+  justify-self: center; /* centered within column on mobile */
+  text-align: center;
+}
+
+.cover {
+  grid-area: cover;
+  justify-self: center; /* center the image on mobile */
+  max-width: min(320px, 100%);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+#review {
+  grid-area: review;
+  justify-self: center; /* center the text block on mobile */
+  max-width: var(--max-text);
+  margin: 0.25rem 0 1rem;
+  text-wrap: pretty;
+}
+
+/* ========== Footer ========== */
+footer p {
+  border-top: 4px solid var(--accent);
+  padding: 10px 16px;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+
+@media screen and (min-width: 700px) {
+  .book {
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    column-gap: 1.5rem;
+    align-items: start;
+    padding: 2rem 1rem;
+
+    /* left col: info | middle col: title/cover/review | right col: empty */
+    grid-template-areas:
+      "info title   empty"
+      "info cover   empty"
+      "info review  empty";
+  }
+
+  .info   { grid-area: info;  border-right: 2px solid #ddd; padding-right: 1rem; }
+  .title  { grid-area: title; justify-self: start; text-align: left; margin-top: 0; }
+  .cover  { grid-area: cover; justify-self: center; max-width: 380px; }
+  #review { grid-area: review; justify-self: start; text-align: left; max-width: 65ch; }
+
+  /* Optional: ensure the divider spans all rows */
+  .info { align-self: stretch; }
 }
